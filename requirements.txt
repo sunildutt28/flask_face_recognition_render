@@ -1,0 +1,6 @@
+flask
+face_recognition
+opencv-python
+gunicorn
+numpy>=1.23,<2.0
+Pillow

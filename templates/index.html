@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if filename %}
+    <h2>Uploaded Image:</h2>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" width="300"><br>
+    <h2>Hello, {{ name }}!</h2>
+    <script>
+        const msg = new SpeechSynthesisUtterance("Hello, {{ name }}");
+        window.speechSynthesis.speak(msg);
+    </script>
+    {% endif %}
+</body>
+</html>
